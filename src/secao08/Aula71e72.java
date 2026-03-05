@@ -3,7 +3,7 @@ package secao08;
 import java.util.Locale;
 import java.util.Scanner;
 
-import secao08.Triangulo;
+import secao08.Entities.Triangulo;
 
 public class Aula71e72 {
     public static void main(String[] args) {

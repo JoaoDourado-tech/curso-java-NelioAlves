@@ -1,4 +1,4 @@
-package secao08;
+package secao08.Entities;
 
 public class Triangulo {
     public double a;
