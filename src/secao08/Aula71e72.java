@@ -7,7 +7,6 @@ import secao08.Entities.Triangulo;
 
 public class Aula71e72 {
     public static void main(String[] args) {
-        //Exercício SEM POO
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
