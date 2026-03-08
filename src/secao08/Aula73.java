@@ -74,6 +74,11 @@ public class Aula73 {
             System.out.println("[REMOVER] ou [EXIT] para sair do Menu REMOVER");
             sistema = sc.next();
         }
+
+
+        System.out.println("Dados do Produto: " + item);
+
+
         System.out.println("Menu REMOVER finalizado...");
         sc.close();
     }

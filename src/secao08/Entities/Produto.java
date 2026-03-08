@@ -15,4 +15,8 @@ public class Produto {
     public void removerEstoque(int quantRemove){
          this.quantidade -= quantRemove;
     }
+    public String toString() {
+        return "Produto Nome: "+ nome + ", Preço: R$" + String.format("%.2f", preco) + ", Quantidade: "+ quantidade +
+                " unidades, Valor Total: " + String.format("%.2f", calcularValorTotal());
+    }
 }
