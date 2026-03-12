@@ -23,10 +23,22 @@ public class Aula83Produto {
         System.out.println("Digite a quantidade do produto: ");
         int quantidade = sc.nextInt();
 
-        Produto p = new Produto(nome, preco, quantidade); //Construtor Parametrado
+        sc.nextLine(); //Limpar o Buffer
 
-        System.out.println(p);
+        Produto p1 = new Produto(nome, preco, quantidade); //Construtor p1
 
+        System.out.println(p1);
+
+        //Produto p2 - SEM ESTOQUE
+        System.out.println("Digite o nome do produto: ");
+        String nome2 = sc.nextLine();
+
+        System.out.println("Digite o valor do produto: ");
+        double preco2 = sc.nextDouble();
+
+        Produto p2 = new Produto(nome2, preco2);  //Sobrecarga p2
+
+        System.out.println(p2);
 
 
 
