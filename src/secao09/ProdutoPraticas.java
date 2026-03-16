@@ -48,12 +48,6 @@ public class ProdutoPraticas {
 
         System.out.println(p2);
 
-
-
-
-
-
-
         sc.close();
     }
 }

@@ -5,49 +5,41 @@ public class Produto {
     private double preco;
     private int quantidade;
 
-    //Construtor:
-    public Produto (String nome, double preco, int quantidade) {
-        this.nome = nome; //this foca na referência do próprio Objeto
+
+    //Construtor gerado AUTOMATICAMENTE:
+    public Produto(String nome, double preco, int quantidade) {
+        this.nome = nome;
         this.preco = preco;
         this.quantidade = quantidade;
-        // Dessa forma, esse construtor receberá nos parâmetros os atributos diretamente para que se verifique se todos os dados foram preenchidos adequandamente...
     }
 
-    // Sobrecarga:
-    public Produto (String nome, double preco) {
+    //Sobrecarga gerada AUTOMATICAMENTE a partir do Construtor:
+    public Produto(String nome, double preco) {
         this.nome = nome;
         this.preco = preco;
     }
 
 
-    // Metodo para permitir ALTERAR o valor do Atributo NOME
-    public void setNome(String nome){
-        this.nome = nome; //Atributo nome recebe o parâmetro nome
-    }
-
-    // Metodo usado para ALTERAR o valor do Atributo PRECO
-    public void setPreco(double preco){
-        this.preco = preco; //Atributo preco recebe o parâmetro preco
-    }
-
-
-    // Metodo usado para PEGAR do Atributo NOME
-    public String getNome(){
+    //Getters e Setters AUTOMATICAMENTE:
+    public String getNome() {
         return nome;
     }
 
-    // Metodo usado para PEGAR do Atributo PRECO
-    public double getPreco(){
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco() {
         return preco;
     }
 
-    public int getQuantidade(){
-        return quantidade;
+    public void setPreco(double preco) {
+        this.preco = preco;
     }
 
-
-
-
+    public int getQuantidade() {
+        return quantidade;
+    }
 
     // Mostrador de Dados:
     public String toString(){
