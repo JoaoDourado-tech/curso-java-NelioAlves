@@ -24,6 +24,6 @@ public class Aula96 {
         System.out.printf("Média das Alturas: %.2f%n", media);
 
         sc.close();
-    
+
     }
 }
