@@ -31,5 +31,7 @@ public class Ex01 {
                 System.out.println(vetorNum[i]);
             }
         }
+
+        sc.close();
     }
 }
