@@ -1,5 +1,6 @@
 package secao10.Entidades;
 
+
 public class Empregado {
     private int id;
     private String nome;
@@ -19,20 +20,20 @@ public class Empregado {
         this.id = id;
     }
 
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
-    }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+
+    public void setSalario(double salario) {
+        this.salario = salario;
     }
 
     @Override
@@ -44,9 +45,7 @@ public class Empregado {
                 '}';
     }
 
-    public void aumentarSalario(double porcentagem){
-        salario += (salario * (porcentagem/100));
+    public void aumentarSalario(double porcentagem) {
+        salario += (salario*porcentagem/100);
     }
-
-
 }

@@ -1,5 +1,6 @@
 package secao10;
 
+
 import secao10.Entidades.Empregado;
 
 import java.util.ArrayList;
@@ -12,42 +13,51 @@ public class ExEmpregado {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Quantos empregados serão registrados:");
-        int quant =  sc.nextInt();
+        System.out.println("Informe a quantidade de funcionários que serão REGISTRADOS: ");
+        int quantFuncionarios = sc.nextInt();
 
-        List<Empregado> listEmpregado = new ArrayList<>();
+        List<Empregado> listEmpregados = new ArrayList<>();
+        Empregado  empregado;
 
-        for (int i = 0; i < quant; i++) {
-            System.out.printf("Empregado #%d: \n", i + 1);
-            System.out.print("ID: ");
-            int id = sc.nextInt();
-            System.out.println();
-            System.out.print("Nome: ");
+        for (int i = 0; i < quantFuncionarios; i++) {
+            System.out.println("CÓDIGO FUNCIONÁRIO: ");
+            int idFuncionario = sc.nextInt();
+            System.out.println("NOME FUNCIONÁRIO: ");
             sc.nextLine();
-            String nome = sc.nextLine();
-            System.out.println();
-            System.out.print("Salario: ");
-            double salario = sc.nextDouble();
+            String nomeFuncionario = sc.nextLine();
+            System.out.println("SALARIO FUNCIONARIO: ");
+            double salarioFuncionario = sc.nextDouble();
 
-            listEmpregado.add(new Empregado(id, nome, salario));
+            empregado = new Empregado (idFuncionario, nomeFuncionario, salarioFuncionario);
+
+            listEmpregados.add(empregado);
         }
 
-        System.out.println("Informe o ID do Empregado que terá AUMENTO SALARIAL: ");
-        int idProcurado = sc.nextInt();
-        Empregado procurado = listEmpregado.stream().filter(x -> x.getId() == idProcurado).findFirst().orElse(null);
+        System.out.println("SISTEMA DE BUSCA FUNCIONARIOS:");
+        System.out.println("Informe o ID BUSCADO: ");
+        int idBuscado = sc.nextInt();
 
-        if (procurado == null) {
-            System.out.println("ID NÃO EXISTE!");
+        Empregado empregadoBuscado = listEmpregados.stream().filter(x->x.getId() == idBuscado).findFirst().orElse(null);
+
+        if (empregadoBuscado == null) {
+            System.out.println("ID INVÁLIDO");
 
         } else {
-            System.out.println("ID: " + procurado.getId());
-            System.out.println("Informe a porcentagem de AUMENTO SALARIAL: ");
+            System.out.println("AUMENTO SALARIAL: ");
+            System.out.println("informe o percentual de aumento:");
             double porcentagem = sc.nextDouble();
-            procurado.aumentarSalario(porcentagem);
+            empregadoBuscado.aumentarSalario(porcentagem);
         }
-        for (Empregado x : listEmpregado) {
+
+        for (Empregado x : listEmpregados) {
             System.out.println(x);
         }
+
+
+
+
+
+
 
         sc.close();
     }
