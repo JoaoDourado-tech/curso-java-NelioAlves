@@ -12,8 +12,7 @@ public class Aula119FormatacaoDATE {
 
         LocalDate d04 = LocalDate.parse("2026-04-14"); // Padrão ISO 8601
 
-        LocalDateTime d05 = LocalDateTime.parse("2026-04-14T08:17"); // Padrão ISO 8601 com HORA EM ZULU
-
+        LocalDateTime d05 = LocalDateTime.parse("2026-04-14T08:17");
         Instant d06 = Instant.parse("2026-04-14T08:17:00Z"); // Data-Hora GLOBAL digitada
 
         DateTimeFormatter fmt1 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
