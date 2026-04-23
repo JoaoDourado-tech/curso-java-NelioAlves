@@ -1,8 +1,7 @@
-package secao12.Aula130.entities;
+package secao12.Aula130.Exercicio01.entities;
 
-import secao12.Aula130.entities.enums.WorkerLevel;
+import secao12.Aula130.Exercicio01.entities.enums.WorkerLevel;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package secao12.Aula130.entities;
+package secao12.Aula130.Exercicio01.entities;
 
 import java.time.LocalDate;
 
